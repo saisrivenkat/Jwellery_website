@@ -1,4 +1,4 @@
-import React from "react";
+
 import p1 from "./images/p1.png";
 import p2 from "./images/p2.png";
 import { NavLink } from "react-router-dom";

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import client from "./images/client.jpg"
 function Testimonials() {
   return (

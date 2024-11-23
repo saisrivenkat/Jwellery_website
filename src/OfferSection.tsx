@@ -1,4 +1,4 @@
-import React from 'react'
+
 import o1 from './images/o1.jpg'
 import o2 from './images/o2.jpg'
 import o3 from './images/o3.jpg'
