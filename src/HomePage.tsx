@@ -17,20 +17,23 @@ import Testimonials from "./Testimonials";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import { useNavigate } from "react-router-dom";
-interface shopProps{
-  showMorevisible?:boolean
+interface shopProps {
+  showMorevisible?: boolean;
 }
 
-interface aboutProps{
-  showMorevisible?:boolean
+interface aboutProps {
+  showMorevisible?: boolean;
 }
 
 function HomePage() {
   //const [visible,setvisible] = useState<boolean>(false)
-  
+  const navigate = useNavigate();
+  const navigateToProducts = () => {
+    navigate("/products");
+  };
   return (
     <>
-      <Navbar BackgroundclassName="header_section"/>
+      <Navbar BackgroundclassName="header_section" />
       {/* slider section */}
       <section className="slider_section position-relative">
         <div className="slider_bg_box">
@@ -50,9 +53,9 @@ function HomePage() {
                 The point of using Lorem
               </p>
               <div>
-                <a href="/" className="slider-link">
+                <span onClick={navigateToProducts} className="slider-link">
                   Shop Now
-                </a>
+                </span>
               </div>
             </div>
           </div>
@@ -69,18 +72,19 @@ function HomePage() {
   );
 }
 
-export const Shop:React.FC<shopProps>= ({showMorevisible}) => {
+export const Shop: React.FC<shopProps> = ({ showMorevisible }) => {
   const navigate = useNavigate();
-  const productsNavigation=()=>{
-    navigate('/products')
-  }
+  const productsNavigation = () => {
+    navigate("/products");
+  };
   return (
     <>
       {/* shop section */}
       <section className="shop_section layout_padding">
         <div className="container">
           <div className="heading_container heading_center">
-            <h2>Latest Products</h2>
+            {!showMorevisible ? <h2>All Products</h2>:<h2>Latest Products</h2>}
+            
           </div>
           <div className="row">
             <div className="col-sm-6 col-md-4 col-lg-3">
@@ -236,11 +240,11 @@ export const Shop:React.FC<shopProps>= ({showMorevisible}) => {
               </div>
             </div>
           </div>
-          {showMorevisible &&
-          <div className="btn-box">
-            
-            <span onClick={productsNavigation}>View All Products</span>
-          </div>}
+          {showMorevisible && (
+            <div className="btn-box">
+              <span onClick={productsNavigation}>View All Products</span>
+            </div>
+          )}
         </div>
       </section>
       {/* end shop section */}
@@ -248,11 +252,11 @@ export const Shop:React.FC<shopProps>= ({showMorevisible}) => {
   );
 };
 
-export const About:React.FC<aboutProps> = ({showMorevisible}) => {
+export const About: React.FC<aboutProps> = ({ showMorevisible }) => {
   const navigate = useNavigate();
-  const aboutNavigation=()=>{
-    navigate('/about')
-  }
+  const aboutNavigation = () => {
+    navigate("/about");
+  };
   return (
     <>
       {/* about section */}
@@ -270,12 +274,22 @@ export const About:React.FC<aboutProps> = ({showMorevisible}) => {
                   <h2>About Us</h2>
                 </div>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Corrupti dolorem eum consequuntur ipsam repellat dolor soluta
-                  aliquid laborum, eius odit consectetur vel quasi in quidem,
-                  eveniet ab est corporis tempore.
+                  We are a proud manufacturing unit focused on providing quality
+                  employment to skilled workers and delivering exceptional
+                  products. Starting alone from zero, I built this business with
+                  customer encouragement and a commitment to maintaining a
+                  superior quality standard of 92.5 instead of 91.6, ensuring
+                  trust and satisfaction<br/><br/>
+                  {!showMorevisible && `We offer competitive prices thanks to
+                  our in-house manufacturing and a unique advantage: customers
+                  can review and suggest changes to the product just before the
+                  final stage. Additionally, we welcome custom designs and
+                  manufacture them to your specifications. Visit our website to
+                  view our process and designs—we look forward to serving you!`}
                 </p>
-                {showMorevisible &&                 <span onClick={aboutNavigation}>Read More</span>}
+                {showMorevisible && (
+                  <span onClick={aboutNavigation}>Read More</span>
+                )}
               </div>
             </div>
           </div>

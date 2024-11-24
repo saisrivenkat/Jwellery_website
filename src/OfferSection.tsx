@@ -1,8 +1,14 @@
 
+import { useNavigate } from 'react-router-dom'
 import o1 from './images/o1.jpg'
 import o2 from './images/o2.jpg'
 import o3 from './images/o3.jpg'
+
 function OfferSection() {
+
+  const navigate = useNavigate()
+
+  
   return (
     <>
   {/* offer section */}
@@ -14,7 +20,7 @@ function OfferSection() {
             <img src={o1} alt="" />
             <div className="detail-box">
               <h2>Upto 15% Off</h2>
-              <a href="">Shop Now</a>
+              <span onClick={()=>navigate('/products')}>Shop Now</span>
             </div>
           </div>
         </div>
@@ -23,14 +29,14 @@ function OfferSection() {
             <img src={o2} alt="" />
             <div className="detail-box">
               <h2>Upto 10% Off</h2>
-              <a href="">Shop Now</a>
+              <span onClick={()=>navigate('/products')}>Shop Now</span>
             </div>
           </div>
           <div className="box offer-box3">
             <img src={o3} alt="" />
             <div className="detail-box">
               <h2>Upto 20% Off</h2>
-              <a href="">Shop Now</a>
+              <span onClick={()=>navigate('/products')}>Shop Now</span>
             </div>
           </div>
         </div>

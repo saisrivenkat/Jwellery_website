@@ -24,7 +24,7 @@ const  Navbar: React.FC<NavbarProps>=({BackgroundclassName})=> {
         <div className="container-fluid">
           <nav className="navbar navbar-expand-lg custom_nav-container">
             <NavLink to="/" className="navbar-brand">
-            Name
+            Sai Pranav Jwellery
               </NavLink>
             <div className="" id="">
               <div className={menuOpen ? "custom_menu-btn menu_btn-style" : "custom_menu-btn"}>
@@ -38,6 +38,7 @@ const  Navbar: React.FC<NavbarProps>=({BackgroundclassName})=> {
                   <NavLink to="/about" onClick={closeMenu}>About</NavLink>
                   <NavLink to="/products" onClick={closeMenu}>Shop</NavLink>
                   <NavLink to="/blog" onClick={closeMenu}>Blog</NavLink>
+                  <NavLink to="/contactUs">Contact US</NavLink>
                 </div>
               </div>
               </div>

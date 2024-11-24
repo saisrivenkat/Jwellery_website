@@ -1,6 +1,4 @@
 
-import p1 from "./images/p1.png";
-import p2 from "./images/p2.png";
 import { NavLink } from "react-router-dom";
 function Footer() {
   
@@ -9,31 +7,7 @@ function Footer() {
       {/* info section */}
       <section className="info_section layout_padding2">
         <div className="container">
-          <div className="row info_form_social_row">
-            <div className="col-md-8 col-lg-9">
-              <div className="info_form">
-                <form action="">
-                  <input type="email" placeholder="Enter your email" />
-                  <button>
-                    <i className="fa fa-arrow-right" aria-hidden="true" />
-                  </button>
-                </form>
-              </div>
-            </div>
-            <div className="col-md-4 col-lg-3">
-              <div className="social_box">
-                <a href="">
-                  <i className="fa fa-facebook" aria-hidden="true" />
-                </a>
-                <a href="">
-                  <i className="fa fa-twitter" aria-hidden="true" />
-                </a>
-                <a href="">
-                  <i className="fa fa-linkedin" aria-hidden="true" />
-                </a>
-              </div>
-            </div>
-          </div>
+          
           <div className="row info_main_row">
             <div className="col-md-6 col-lg-3">
               <div className="info_links">
@@ -46,7 +20,7 @@ function Footer() {
                 </div>
               </div>
             </div>
-            <div className="col-md-6 col-lg-3">
+            {/* <div className="col-md-6 col-lg-3">
               <div className="info_insta">
                 <h4>Instagram</h4>
                 <div className="insta_box">
@@ -62,14 +36,17 @@ function Footer() {
                   <p>long established fact that a reader</p>
                 </div>
               </div>
-            </div>
-            <div className="col-md-6 col-lg-3">
+            </div> */}
+            <div className="col-md-6 col-lg-6">
               <div className="info_detail">
                 <h4>About Us</h4>
                 <p className="mb-0">
-                  when looking at its layout. The point of using Lorem Ipsum is
-                  that it has a more-or-less normal distribution of letters, as
-                  opposed to
+                We are a proud manufacturing unit focused on providing quality
+                  employment to skilled workers and delivering exceptional
+                  products. Starting alone from zero, I built this business with
+                  customer encouragement and a commitment to maintaining a
+                  superior quality standard of 92.5 instead of 91.6, ensuring
+                  trust and satisfaction
                 </p>
               </div>
             </div>
@@ -91,6 +68,31 @@ function Footer() {
               </div>
             </div>
           </div>
+          <div className="row info_form_social_row">
+            <div className="col-md-8 col-lg-9">
+              {/* <div className="info_form">
+                <form action="">
+                  <input type="email" placeholder="Enter your email" />
+                  <button>
+                    <i className="fa fa-arrow-right" aria-hidden="true" />
+                  </button>
+                </form>
+              </div> */}
+            </div>
+            <div className="col-md-4 col-lg-3">
+              <div className="social_box">
+                <a href="">
+                  <i className="fa fa-facebook" aria-hidden="true" />
+                </a>
+                <a href="">
+                  <i className="fa fa-twitter" aria-hidden="true" />
+                </a>
+                <a href="">
+                  <i className="fa fa-linkedin" aria-hidden="true" />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       {/* end info_section */}
@@ -99,7 +101,7 @@ function Footer() {
         <div className="container">
           <p>
             © <span id="displayYear" /> All Rights Reserved By
-            <a href="https://html.design/">Free Html Templates</a>
+            <a href="https://html.design/"> <b>Sai Pranav Jwellery's</b></a>
           </p>
         </div>
       </footer>
